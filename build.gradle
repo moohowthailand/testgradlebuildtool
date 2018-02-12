@@ -1,6 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+    ext.kotlin_version = '1.2.21'
     ext.kotlin_version = '1.1.51'
     repositories {
         google()
@@ -25,3 +26,16 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+//
+//task deleteJar(type: Delete) {
+//    delete 'libs/testgradlebuildtool.jar'
+//}
+//
+//task createJar(type: Copy) {
+//    from('build/intermediates/bundles/release/')
+//    into('libs/jars/')
+//    include('classes.jar')
+//    rename('classes.jar', 'testgradlebuildtool.jar')
+//}
+
+//createJar.dependsOn(deleteJar, buildscript)
